@@ -27,11 +27,11 @@ Users should be able to:
 
 ### Screenshot
 
-![https://github.com/El-Cassegrain/multi-step-form](./screenshot.jpg)
+![screenshot](https://github.com/El-Cassegrain/multi-step-form/screenshot.JPG)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [The solution proposed](https://www.frontendmentor.io/solutions/responsive-multi-step-form-using-vuejs3-gazlNMgEvd)
 - Live Site URL: [Live site](https://el-cassegrain.github.io/multi-step-form/)
 
 ## My process
