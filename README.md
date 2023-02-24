@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![screenshot](https://github.com/El-Cassegrain/multi-step-form/screenshot.JPG)
+![screenshot](https://github.com/El-Cassegrain/multi-step-form/blob/main/screenshot.JPG?raw=true)
 
 ### Links
 
