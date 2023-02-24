@@ -1,0 +1,134 @@
+/* Plans */
+
+.plan input {
+  position: absolute;
+  visibility: hidden;
+
+  &:checked+.plan-content {
+    background-color: $alabaster;
+    border: 1px solid $secondary;
+  }
+}
+
+.plan-label {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.plan {
+  border-radius: 10px;
+  border: 1px solid $light-gray;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    .plan-content {
+      border: 1px solid $secondary;
+
+      &input:checked+.plan-content {
+        border: none;
+      }
+    }
+
+  }
+
+
+  .plan-content {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    width: 100%;
+    height: 100%;
+    padding: 12px 40px 12px 2px;
+    border-radius: 10px;
+  }
+
+  .plan-icon {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 4px
+  }
+
+  .plan-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 6px;
+
+    >span {
+      font-size: 17px;
+      padding-top: 4px;
+      font-weight: 800;
+      line-height: 1.12rem;
+    }
+  }
+}
+
+/* Switch billing */
+#toggle-plan {
+  display: none;
+}
+
+#toggle-plan+label {
+  display: flex;
+  width: 46px;
+  height: 22px;
+  background-color: $primary;
+  border-radius: 100px;
+  align-items: center;
+
+  &::after {
+    content: '';
+    height: 16px;
+    width: 16px;
+    background-color: white;
+    display: inline-flex;
+    border-radius: 100px;
+    margin-left: 3px;
+    transition: transform ease 0.25s;
+
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#toggle-plan:checked + label::after {
+    transform: translateX(24px);
+}
+
+
+@media screen and (min-width: 1200px) {
+  #form1 {
+
+    .invalid-feedback,
+    .valid-feedback {
+      position: absolute;
+      text-align: right;
+      right: 0;
+      top: 0;
+    }
+
+    .plan {
+      display: block;
+      max-width: 30.5%;
+      height: 170px;
+    }
+
+    .plan-content {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr;
+      gap: 10px;
+
+      .plan-icon {
+        display: flex;
+        justify-content: flex-start;
+      }
+    }
+  }
+}

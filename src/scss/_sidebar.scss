@@ -1,0 +1,43 @@
+.step-number {
+    padding: 5px 12px;
+    font-weight: 500;
+    border-radius: 200px;
+    color: $white;
+    border: 1px solid $white;
+}
+
+.step-number.active {
+    background-color: $light;
+    color: $primary;
+    border: 1px solid $light;
+}
+
+#desktop-nav {
+    .nav-item {
+        display: grid;
+        grid-template-columns: 45px 1fr;
+
+        .step-number {
+            width: 32px;
+            height: 32px;
+            margin-top: 4px;
+            line-height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &.active {
+                border: 1px solid $light-blue;
+            }
+        }
+
+        .nav-infos p {
+            color: rgba(#fff, 0.4);
+            font-size: 14px;
+
+            span {
+                letter-spacing: 0.1rem;
+            }
+        }
+    }
+}

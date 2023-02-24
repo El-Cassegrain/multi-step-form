@@ -1,0 +1,14 @@
+@import "global";
+@import "sidebar";
+@import "plans";
+@import "addons";
+
+@import "footer";
+
+/* Main style */
+
+/* Summary */
+#final-step .final-plan-card {
+    display: grid;
+    grid-template-columns: 1fr 90px;
+}

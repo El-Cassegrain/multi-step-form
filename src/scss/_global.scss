@@ -1,0 +1,154 @@
+@import "variables";
+@import "mixins";
+
+/* Then import Bootstrap */
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+/* Global styles */
+body {
+    font-family: $main-font;
+    background: $magnolia;
+    color: $primary;
+
+    a:hover,
+    a:focus {
+        color: $secondary;
+    }
+}
+
+.btn-primary {
+    @include btn-primary;
+}
+
+.btn-secondary {
+    @include btn-secondary;
+}
+
+/* Modale */
+#btn-close-modal {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 9998;
+}
+
+.bg-alabaster {
+    background-color: $alabaster;
+}
+
+.text-magnolia {
+    color: $magnolia;
+}
+
+.text-cool-gray {
+    color: $cool-gray;
+}
+
+.btn-outline:focus,
+.btn-outline:hover {
+    border: 1px solid rgba($primary, 0.65);
+
+}
+
+#bg-top {
+    background: url('./../images/bg-sidebar-mobile.svg') no-repeat top center;
+    background-size: cover;
+    height: 13rem;
+}
+
+#main-steps {
+    background-color: $white;
+    border-radius: 10px;
+
+    p {
+        color: $cool-gray;
+        font-size: 1.15rem;
+        line-height: 1.7rem;
+    }
+}
+
+label {
+    font-size: 14px;
+}
+
+#first-step input {
+    font-weight: 500;
+    &:focus {
+        border: 1px solid $secondary
+    }
+
+    &:invalid {
+        border-color: 1px solid red;
+    }
+    // &:valid {
+    //     border: 1px solid green;
+    // }
+    &:focus {
+        border: 1px solid $secondary !important;
+    }
+}
+
+.invalid-feedback,
+.valid-feedback {
+    position: absolute;
+    text-align: right;
+    right: 0;
+    top: 0;
+}
+
+/* VeeValidate error messages */
+span[role="alert"] {
+    position: absolute;
+    text-align: right;
+    right: 0;
+    top: 0;
+    color: rgb(210, 34, 34);
+}
+
+.border-red {
+    border: 1px solid red;
+}
+
+#back-btn {
+    @include back-btn;
+}
+
+#main-mobile-footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.attribution {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background: $magnolia;
+    }
+
+    #main-steps {
+        height: 610px;
+    }
+
+    #bg-top {
+        height: auto;
+        background-image: none;
+        background-color: $white;
+        margin-top: 3rem;
+        border-radius: 10px;
+        padding: 0 28px;
+        max-width: 1200px;
+
+    }
+
+    .bg-desktop {
+        background: url('./../images/bg-sidebar-desktop.svg') no-repeat top center;
+        background-size: contain;
+    }
+
+}

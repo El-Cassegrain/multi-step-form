@@ -1,0 +1,15 @@
+/* Footer */
+footer#main-desktop-footer {
+    #footer-desktop {
+        position: absolute;
+        bottom: 4px;
+        max-width: 100%;
+        left:0;
+        height: 60px;
+    }
+}
+
+footer#main-mobile-footer {
+    background-color: $white;
+    z-index: 10;
+}
