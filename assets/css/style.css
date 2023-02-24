@@ -10832,7 +10832,7 @@ body a:focus {
 }
 
 #bg-top {
-  background: url("./../images/bg-sidebar-mobile.svg") no-repeat top center;
+  background: url("./images/bg-sidebar-mobile.svg") no-repeat top center;
   background-size: cover;
   height: 13rem;
 }
