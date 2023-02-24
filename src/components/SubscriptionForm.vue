@@ -13,26 +13,18 @@
               v-bind:validate-form="validateForm">
             </Step1>
 
-          <transition name="fade">
             <keep-alive>
               <Step2 v-bind:form-values="values" v-if="step === 1" v-bind:step="step">
               </Step2>
             </keep-alive>
-          </transition>
           
-          <transition name="fade">
             <Step3 v-bind:form-values="values" v-if="step === 2" v-bind:step="step">
             </Step3>
-          </transition>
 
-          <transition name="fade">
             <Step4 v-bind:form-values="values" v-if="step === 3" v-bind:step="step" @back-to-plan="handleBackToPLan">
             </Step4>
-          </transition>
 
-          <transition name="fade">
             <Thanks v-if="step === 4" v-bind:step="step"></Thanks>
-          </transition>
         </main>
 
         <!-- Footer desktop -->
@@ -158,14 +150,3 @@ const validateForm = () => {
 }
 
 </script>
-
-<style scoped>
-
-  /* Transition fade */
-  .fade-enter-from, .fade-leave-to {
-    opacity: 0;
-  }
-  .fade-enter-active {
-    transition: all 0.4s 0.012s ease-in-out;
-  }
-</style>

@@ -10929,7 +10929,7 @@ span[role=alert] {
     max-width: 1200px;
   }
   .bg-desktop {
-    background: url("./../images/bg-sidebar-desktop.svg") no-repeat top center;
+    background: url("./images/bg-sidebar-desktop.svg") no-repeat top center;
     background-size: contain;
   }
 }
