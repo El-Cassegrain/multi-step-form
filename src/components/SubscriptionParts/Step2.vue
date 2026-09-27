@@ -56,6 +56,11 @@
 <script setup>
 import { computed, ref } from "vue"
 
+const props = defineProps({
+  step: Number,
+  formValues: Object,
+})
+
 const plans = props.formValues.plans
 let selectedAddons = props.formValues.selectedAddons
 const addons = props.formValues.addons
@@ -78,11 +83,19 @@ selectedPlan = computed(() => ({
     .billings.find((billing) => billing.period === currentPeriod.value).currency
 }))
 
+// Répercute dans le store le prix du plan sélectionné pour la période courante
+function syncPlanPrice() {
+  props.formValues.selectedPlan.price = plans
+    .find((plan) => plan.name === currentPlan.value)
+    .billings.find((billing) => billing.period === currentPeriod.value).price
+}
+
 function togglePeriod(e) {
   currentPeriod.value = e.target.checked ? "Yearly" : "Monthly"
   currentCurrency.value = e.target.checked ? "yr" : "mo"
   props.formValues.selectedPlan.currency = currentCurrency.value
   props.formValues.selectedPlan.billing = currentPeriod.value
+  syncPlanPrice()
   updateBilling()
   selectedAddons.name = []
   selectedAddons.price = []
@@ -94,11 +107,6 @@ function togglePeriod(e) {
 function updateSelectedPlan(e) {
   props.formValues.selectedPlan.name = e.target.value
   currentPlan.value = props.formValues.selectedPlan.name
+  syncPlanPrice()
 }
-
-const props = defineProps({
-  step: Number,
-  formValues: Object,
-})
-
 </script>

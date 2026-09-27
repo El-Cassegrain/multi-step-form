@@ -34,7 +34,7 @@
 
           <div class="mb-3 position-relative">
             <label for="inputPhone" class="form-label mb-1">Phone Number</label>
-            <input required type="tel" pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
+            <input required type="tel" pattern="\+?[0-9\s\(\)\.\-]{8,20}"
               class="form-control" id="inputPhone" placeholder="e.g +1 234 567 890" v-model="props.formValues.tel">
             <div class="invalid-feedback">Please enter a valid Phone Number</div>
             <div class="valid-feedback">Looks good!</div>
