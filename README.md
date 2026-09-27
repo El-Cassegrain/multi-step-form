@@ -1,63 +1,42 @@
-# Frontend Mentor - Multi-step form solution
+# Multi-step form
 
-This is a solution to the [Multi-step form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+Un formulaire d'abonnement en quatre étapes : infos personnelles, choix de l'offre, options, puis récapitulatif avec calcul du total.
 
-## Table of contents
+![Capture du formulaire multi-étapes](./screenshot.JPG)
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-- [Author](#author)
+**Démo : [el-cassegrain.github.io/multi-step-form](https://el-cassegrain.github.io/multi-step-form/)**
 
-## Overview
+![Vue.js](https://img.shields.io/badge/Vue_3.5-35495E?logo=vuedotjs&logoColor=4FC08D)
+![Pinia](https://img.shields.io/badge/Pinia-FFD859?logo=pinia&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite_8-646CFF?logo=vite&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap_5.3-7952B3?logo=bootstrap&logoColor=white)
+![Sass](https://img.shields.io/badge/Sass-CC6699?logo=sass&logoColor=white)
+![pnpm](https://img.shields.io/badge/pnpm-F69220?logo=pnpm&logoColor=white)
 
-### The challenge
+## Contexte
 
-Users should be able to:
+Solution du challenge [Multi-step form](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ) de Frontend Mentor ([ma solution publiée](https://www.frontendmentor.io/solutions/responsive-multi-step-form-using-vuejs3-gazlNMgEvd)), réalisée en 2023 et mise à jour en 2026.
 
-- Complete each step of the sequence
-- See a summary of their selections on the final step and confirm their order
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
+## Fonctionnalités
 
-### Screenshot
+- Navigation entre les étapes, avec retour en arrière sans perte de saisie
+- Validation native des champs (nom, e-mail, téléphone au format international)
+- Bascule mensuel/annuel qui met à jour tous les prix
+- Récapitulatif avec total calculé à partir de l'offre et des options choisies
+- État partagé entre les étapes via un store Pinia
+- Maquette responsive fidèle au design (sidebar desktop, stepper mobile)
 
-![screenshot](https://github.com/El-Cassegrain/multi-step-form/blob/main/screenshot.JPG?raw=true)
+## Installation
 
-### Links
+```bash
+git clone https://github.com/El-Cassegrain/multi-step-form.git
+cd multi-step-form
+pnpm install
+pnpm dev
+```
 
-- Solution URL: [The solution proposed](https://www.frontendmentor.io/solutions/responsive-multi-step-form-using-vuejs3-gazlNMgEvd)
-- Live Site URL: [Live site](https://el-cassegrain.github.io/multi-step-form/)
+`pnpm build` génère le site dans `dist/`. Le déploiement sur GitHub Pages est fait par GitHub Actions à chaque push sur `main`.
 
-## My process
-I have coded the HTML/CSS part first, then I implemented Vue3 with the composition API. I used Pinia for the values store that going through the app.
-### Built with
+---
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [Vue](https://vuejs.org/) - JS library
-- [Vite.js](https://vitejs.dev/) - Vue framework
-- [Bootstrap 5](https://getbootstrap.com/) - For some helpfull utility classes
-
-### What I learned
-
-I learned a lot in this challenge, I really did a step behind in JS developpment. Especially with Vue.
-
-
-### Continued development
-
-I can't wait to do another challenge with Vue3 ! I really love this tool, and everytime I writ a single line of JS, I'm improving myself.
-
-
-## Author
-
-- Website - [Etienne Leriche](https://etienneleriche.fr/)
-- Frontend Mentor - [@El-Cassegrain](https://www.frontendmentor.io/profile/El-Cassegrain)
+Réalisé par [Etienne Leriche](https://etienneleriche.com), designer UI/UX et développeur front-end.
