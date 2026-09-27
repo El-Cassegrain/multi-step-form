@@ -58,6 +58,11 @@
 
 <script setup>
 
+const props = defineProps({
+  step: Number,
+  formValues: Object,
+})
+
 const selectedAddons = props.formValues.selectedAddons
 const selectedPlan = props.formValues.selectedPlan
 
@@ -72,10 +77,4 @@ const sum = () => {
 const emit = defineEmits([
   "back-to-plan"
 ])
-
-const props = defineProps({
-  step: Number,
-  formValues: Object,
-})
-
 </script>

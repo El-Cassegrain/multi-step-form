@@ -4,7 +4,7 @@
     <section id="thanks-section">
         <div class="row">
             <div class="col-12 text-center pt-5 pb-4">
-                <img src="/assets/images/icon-thank-you.svg" alt="">
+                <img :src="`${baseUrl}assets/images/icon-thank-you.svg`" alt="">
             </div>
             <div class="col-12 text-center">
                 <h2 class="fw-bold">Thank you!</h2>
@@ -21,8 +21,10 @@
 
 <script setup>
 
-const props = defineProps({
+defineProps({
   step: Number
 })
+
+const baseUrl = import.meta.env.BASE_URL
 
 </script>

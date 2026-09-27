@@ -13,7 +13,7 @@ export const useFormValuesStore = defineStore('form-values', {
     plans: [
       {
         name: "Arcade",
-        img: "assets/images/icon-arcade.svg",
+        img: `${import.meta.env.BASE_URL}assets/images/icon-arcade.svg`,
         billings: [
           {
             period: "Monthly",
@@ -29,7 +29,7 @@ export const useFormValuesStore = defineStore('form-values', {
       },
       {
         name: "Advanced",
-        img: "assets/images/icon-advanced.svg",
+        img: `${import.meta.env.BASE_URL}assets/images/icon-advanced.svg`,
         billings: [
           {
             period: "Monthly",
@@ -45,7 +45,7 @@ export const useFormValuesStore = defineStore('form-values', {
       },
       {
         name: "Pro",
-        img: "assets/images/icon-pro.svg",
+        img: `${import.meta.env.BASE_URL}assets/images/icon-pro.svg`,
         billings: [
           {
             period: "Monthly",

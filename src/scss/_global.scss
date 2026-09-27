@@ -2,7 +2,7 @@
 @import "mixins";
 
 /* Then import Bootstrap */
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "bootstrap/scss/bootstrap";
 
 /* Global styles */
 body {
@@ -51,7 +51,7 @@ body {
 }
 
 #bg-top {
-    background: url('./images/bg-sidebar-mobile.svg') no-repeat top center;
+    background: url('/assets/images/bg-sidebar-mobile.svg') no-repeat top center;
     background-size: cover;
     height: 13rem;
 }
@@ -147,7 +147,7 @@ span[role="alert"] {
     }
 
     .bg-desktop {
-        background: url('./images/bg-sidebar-desktop.svg') no-repeat top center;
+        background: url('/assets/images/bg-sidebar-desktop.svg') no-repeat top center;
         background-size: contain;
     }
 

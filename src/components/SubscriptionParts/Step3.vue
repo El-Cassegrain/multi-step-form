@@ -39,6 +39,11 @@
 </template>
 
 <script setup>
+const props = defineProps({
+    step: Number,
+    formValues: Object,
+})
+
 let currentPeriod = props.formValues.selectedPlan.billing
 let currentCurrency = props.formValues.selectedPlan.currency
 let selectedAddons = props.formValues.selectedAddons
@@ -60,10 +65,4 @@ function updateSelectedAddons(e) {
         }
     }
 }
-
-const props = defineProps({
-    step: Number,
-    formValues: Object,
-})
-
 </script>
